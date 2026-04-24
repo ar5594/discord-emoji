@@ -27,20 +27,18 @@ A professional tool designed to extract and transfer Discord assets with ease. D
 
 ## ⚙️ How to Run
 
-1.  **Download the Code**:
-    Click on the green **Code** button and select **Download ZIP**, or use:
-    ```bash
-    git clone [https://github.com/ar5594/discord-emoji.git](https://github.com/ar5594/discord-emoji.git)
-    ```
+1.  **Get the Code**:
+    * **Option A**: Click the green **Code** button and select **Download ZIP**, then extract it.
+    * **Option B**: Create a new file named `index.js` on your computer and copy the bot code into it.
 2.  **Install Requirements**:
-    Open your terminal/CMD inside the folder and run:
+    Open your terminal/CMD inside the project folder and run:
     ```bash
     npm install discord.js adm-zip axios
     ```
 3.  **Add Your Token**:
-    Open `index.js` and put your bot token in `const TOKEN = "YOUR_BOT_TOKEN_HERE";`.
+    Open `index.js` and place your bot token in: `const TOKEN = "YOUR_BOT_TOKEN_HERE";`.
 4.  **Start the Bot**:
-    Run:
+    Run the following command:
     ```bash
     node index.js
     ```
