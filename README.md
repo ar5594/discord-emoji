@@ -1,56 +1,165 @@
-# 🛠️ Smart Asset Extractor
+# 🎬 Vito Multi Downloader (K9K Edition)
 
-A professional tool designed to extract and transfer Discord assets with ease. Developed by **k9k (r.vu)**.
-
----
-
-## 🚀 Features
-
-* **Full Asset Support**: Extract any **Animated** or **Static** emoji and sticker from any server you are in.
-* **Easy Transfer**: Quickly grab assets and move them to your own server with high-quality Image/GIF links.
-* **Sticker Extraction**: Extract stickers by providing an ID or simply replying to a sticker message.
-* **Bulk Server Backups**: Scan entire guilds and package all available emojis and stickers into a structured `.zip` file for easy re-uploading.
-* **Interactive UI**: Fully managed via Discord buttons and pagination for smooth navigation.
+A powerful and modern **Discord bot** built with `discord.js v14` that allows users to download TikTok videos in multiple formats — including **No Watermark, HD, Watermarked, and MP3 audio** — through an interactive and clean interface.
 
 ---
 
-## 📜 Available Commands
+## ✨ Features
 
-| Command | Usage | Description |
-| :--- | :--- | :--- |
-| `!help` | `!help` | Displays the help menu. |
-| `!gete` | `!gete [Emoji/ID]` | Extracts a specific emoji (Animated/Static). |
-| `!gets` | `!gets [ID/Reply]` | Extracts a specific sticker. |
-| `!getall` | `!getall` | Opens the server selection menu for bulk extraction. |
-
----
-
-## ⚙️ How to Run
-
-1.  **Get the Code**:
-    * **Option A**: Click the green **Code** button and select **Download ZIP**, then extract it.
-    * **Option B**: Create a new file named `index.js` on your computer and copy the bot code into it.
-2.  **Install Requirements**:
-    Open your terminal/CMD inside the project folder and run:
-    ```bash
-    npm install discord.js adm-zip axios
-    ```
-3.  **Add Your Token**:
-    Open `index.js` and place your bot token in: `const TOKEN = "YOUR_BOT_TOKEN_HERE";`.
-4.  **Start the Bot**:
-    Run the following command:
-    ```bash
-    node index.js
-    ```
+* 🎞️ Download TikTok videos **without watermark**
+* 💎 High-quality (HD) video support
+* 🏷️ Download with watermark (original format)
+* 🎵 Extract audio (MP3)
+* ⚡ Fast API integration using TikWM
+* 🧠 Smart session handling (prevents expired interactions)
+* 📩 Option to send files via DM or specific log channel
+* 🎛️ Slash command setup system
+* 🔒 Admin-only configuration commands
+* 🎨 Clean UI with embeds, buttons, and modals
 
 ---
 
-## 📞 Technical Support & Community
+## 📦 Installation
 
-If you encounter bugs or want to suggest new features:
+### 1. Clone the repository
 
-* **Discord Community**: [Join Support Server](https://discord.gg/wxkxHmR9GT)
-* **Developer**: `k9k (r.vu)`
+```bash
+git clone https://github.com/yourusername/vito-multi-downloader.git
+cd vito-multi-downloader
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure the bot
+
+Edit the `config.json` file:
+
+```json
+{
+  "token": "YOUR_BOT_TOKEN",
+  "fixedChannelId": "CHANNEL_ID",
+  "logsChannelId": "CHANNEL_ID",
+  "brandName": "K9K",
+  "sendToDM": false,
+  "features": {
+    "tiktok": {
+      "enabled": true
+    }
+  }
+}
+```
 
 ---
-© 2026 k9k. All rights reserved.
+
+## 🚀 Running the Bot
+
+```bash
+npm start
+```
+
+---
+
+## ⚙️ Commands
+
+### `/setup`
+
+Deploys the main interface (button + embed) in the current channel.
+
+### `/setlogs`
+
+Sets the channel where downloaded files will be sent.
+
+**Usage:**
+
+```
+/setlogs channel:#your-channel
+```
+
+---
+
+## 🧩 How It Works
+
+1. User clicks the TikTok button
+2. A modal appears to paste the video URL
+3. Bot fetches video data via API
+4. User selects desired format:
+
+   * No Watermark
+   * HD
+   * Watermarked
+   * Audio (MP3)
+5. Bot processes and delivers the file
+
+---
+
+## 📁 Project Structure
+
+```
+📦 vito-multi-downloader
+ ┣ 📂 commands
+ ┃ ┗ 📜 tiktok.js
+ ┣ 📜 index.js
+ ┣ 📜 config.json
+ ┣ 📜 package.json
+ ┗ 📜 README.md
+```
+
+---
+
+## 🔐 Permissions Required
+
+* Send Messages
+* Embed Links
+* Attach Files
+* Use Slash Commands
+* Read Message History
+
+---
+
+## 🧠 Notes
+
+* Make sure your bot has proper permissions in the server
+* Large files may take longer to upload depending on Discord limits
+* TikTok private videos cannot be downloaded
+
+---
+
+## 🛠️ Tech Stack
+
+* Node.js
+* discord.js v14
+* Axios (API requests)
+
+---
+
+## 📌 To Do
+
+* [ ] Add support for more platforms (YouTube, Instagram)
+* [ ] Add caching system
+* [ ] Improve UI animations
+* [ ] Add language support
+
+---
+
+## 👨‍💻 Author
+
+Developed by **Vito**
+Customized branding: **K9K**
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub!
+
+---
